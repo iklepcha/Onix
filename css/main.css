@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #686868;
+	font-family: "Roboto", sans serif;
+	line-height: 1.5;
+}
+
+.navbar {
+	top: 0;
+	left: 0;
+	z-index: 11;
+	position: fixed;
+	width: 100%;
+	height: 61.4px;
+	background-color: black;
+	display: flex;
+	/*flex-wrap: wrap;*/ /*перенос строки */
+	justify-content: left; /*прижимает содержимое к краям */
+}
+
+.menu {
+	margin-left: 1.5%;
+	font-size: 20px;
+
+}
+
+.navbar .menu ul {
+	display: flex;
+}
+
+.navbar .logo {
+	margin-left: 10.4%;
+	width: 132px;
+}
+
+.navbar .menu ul {
+	display: flex;
+	list-style: none;
+}
+
+.navbar .menu ul li {
+	margin: 20px 6px 0px 6px;
+}
+
+.menu ul li a {
+	color: black;
+	font-weight: 400;
+}
+
+.menu ul a {
+	border: 1px white solid;
+	background-color: white;
+	padding: 5px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: white;
+}
+
+.navbar .menu ul a:hover{
+	background-color: black;
+	color: white;
+}
+
+.navbar .menu .active {
+	background-color: black;
+	color: white;
+}
+
+.content {
+	outline: 1px green solid;
+	margin: 100px 15.5%;
+}
+
+
+
+
+
+/*Слайдер*/
+.slider_item img{
+    width: 100%;
+    height: auto;
+}
+
+.slick-track{
+    display: flex;
+}
+
+.slick-list{
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+    border: 0px;
+}
+
+.slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 35px;
+    height: 59px;
+    margin: -30px 20px; 
+    border: 0px;
+    outline: none;
+}
+
+.slider .slick-arrow.slick-prev{
+    left: 0;
+    background: url('../img/left.png') 0 0 /100% no-repeat;
+}
+
+.slider .slick-arrow.slick-next{
+    right: 0;
+    background: url('../img/right.png') 0 0 /100% no-repeat;
+}
+
+.slider .slick-arrow.slick-prev:hover{
+    background: url('../img/left_white.png') 0 0 /100% no-repeat;
+    cursor: pointer;
+}
+
+.slider .slick-arrow.slick-next:hover{
+    background: url('../img/right_white.png') 0 0 /100% no-repeat;
+    cursor: pointer;
+}
+
+
+
+
+
+.block__slogan {
+	margin-top: 20px;
+}
+
+
+
+
+
+/*------------------------------------*/
+.content {
+	outline: 1px red solid;
+	margin: 100px 10.4%;
+}
+.category {
+	outline: 1px red solid;
+	float: left;
+}
