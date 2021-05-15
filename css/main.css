@@ -3,6 +3,11 @@
     outline-offset: 0;
 }
 
+h1::selection, h2::selection, h3::selection, p::selection, span::selection {
+	color: white;
+	background-color: grey;
+}
+
 body, html {
 	background: #F4F4F4;
 	font-family: 'Roboto', sans-serif;
@@ -129,19 +134,19 @@ ul button:hover {
 
 .content {
 	display: flex;
+	align-content: flex-start;
 	flex-wrap: wrap;
 	justify-content: center;
-	padding: 0.6% 0.6% 0.6% 0%;
+	margin: 0 auto;
+	max-width: 1400px;
+	padding: 0.9% 0.6% 0.6% 0.6%;
 	width: 100%;
 	border-radius: 5px;
 	background-color: white;
-	/*outline: 1px green solid;*/
 }
 
 .game {
-	/*outline: 1px pink solid;*/
-	margin-left: 15px;
-	margin-bottom: 15px;
+	margin: 0 7.5px 15px 7.5px;
 	width: 160px;
 	height: 160px;
 	border-radius: 5px;
@@ -149,8 +154,6 @@ ul button:hover {
 }
 
 .game:hover {
-	/*outline: 3px #6197FF solid;
-	-webkit-transition: .1s ease-out;*/
 	transform: scale(1.1);
 	transition: 0.5s;
 }
@@ -236,6 +239,116 @@ ul button:hover {
 	transition: 0.5s;
 }
 
+.namegame {
+	margin-bottom: 0.9%;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+
+
+
+
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.content .button {
+	background-color: #6197FF;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin: 10px 0;
+  -webkit-transition: .2s ease-out;
+}
+.butbbc {
+	display: flex;
+	justify-content: flex-end;
+	width: 900px;
+	margin: 0 auto;
+	background-color: #6197FF;
+}
+.butg {
+	width: 32px;
+	height: 32px;
+	padding-right: 10px;
+	-webkit-transition: .2s ease-out;
+}
+.butg:hover {
+	transform: scale(1.1);
+	-webkit-transition: .2s ease-out;
+}
+.imgfull {
+	width: 32px;
+	height: 32px;
+}
+.error {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+}
+iframe {
+	border: none;
+	margin: 0 auto;
+	width: 900px;
+	height: 540px;
+}
+
+.description {
+	margin: 2% auto;
+	text-align: left;
+	font-size: 18px;
+	width: 1200px;
+	margin: 2% auto;
+}
+.control{
+	margin: 0.5% auto;
+	width: 1200px;
+}
+.control__r{
+	margin-bottom: 0.5%;
+}
+.control__r span {
+	font-weight: bold;
+}
+.namegamecopy h2 {
+	margin: 2% auto;
+	text-align: center;
+	font-weight: 500;
+	width: 1200px;
+}
+
+.gamecopy {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	width: 1200px;
+}
+
+
+
+
+
+
 .name {
-	width: 95%;
+	margin: 0 auto;
+	width: 1200px;
+}
+.ulname {
+	margin-left: 4%;
+}
+.emeil {
+	text-align: center;
+	font-weight: 600;
 }

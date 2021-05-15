@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onix</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../../img/icon_logo.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../css/main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<header class="header">
+		<div class="logo">
+			<a href="#">
+				<img src="../../img/logo.png">
+			</a>
+		</div>
+		<nav class="navbar">
+			<ul>
+				<li>
+					<div class="input">
+						<input placeholder="Поиск игр" type="text" name="search">
+					</div>
+					<button>Войти</button>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="conteiner">
+		
+		<aside class="menu">
+			<!-- Левое меню котегории -->
+			<ul>
+				<li><a href="#">Все игры</a></li>
+				<li><a href="#">Игры для двоих</a></li>
+				<li><a href="#">Гонки</a></li>
+				<li><a href="#">Экшен</a></li>
+				<li><a href="#">Стратегии</a></li>
+				<li><a href="#">Шутеры</a></li>
+				<li><a href="#">Симуляторы</a></li>
+				<li><a href="#">Инди</a></li>
+				<li><a href="#">Спортивные</a></li>
+				<li><a href="#">Файтинги</a></li>
+				<li><a href="#">Головоломки</a></li>
+				<li><a href="#">Аркада</a></li>
+				<li><a href="#">Приключение</a></li>
+			</ul>
+		</aside>
+
+		<main class="content">
+			<!-- Контент -->
+
+			<div class="namegame">
+				VENGE
+			</div>
+
+			<div id="container">
+				<iframe src="https://venge.io/"></iframe>
+					<div class="butbbc">
+				    	<button class="button"><div class="butg"><img class="imgfull" src="../../img/fullscreenhover.png"></div></button>
+					</div>
+					<div class="description">
+						<p>
+							Venge.io - это многопользовательский шутер от первого лица с режимом захвата флага. Выберите себе персонажа, подберите оружие и запрыгивайте в динамичный бой. Используйте свои заточенные навыки и рефлексы, чтобы доминировать в таблице лидеров. Разблокируйте карточки и тактически используйте их против своих врагов.
+						</p>
+					</div>
+					<div class="control">
+						<h2>Управление</h2>
+						<p class="control__r">
+							<span>WASD</span> - Перемещение
+						</p>
+						<p class="control__r">
+							<span>ЛКМ</span> - Стрельба
+						</p>
+						<p class="control__r">
+							<span>ПКМ / SHIFT</span> - Прицеливание
+						</p>
+					</div>
+
+					<div class="namegamecopy"><h2>Похожие игры</h2></div>
+					<div class="gamecopy">
+
+						<div class="game">
+							<a href="#">
+							<img src="img/test.png">
+							<div class="footer-game">
+								<p>Название игры</p>
+							</div>
+							</a>
+						</div>
+						<div class="game">
+							<a href="#">
+							<img src="img/test.png">
+							<div class="footer-game">
+								<p>Название игры</p>
+							</div>
+							</a>
+						</div>
+						<div class="game">
+							<a href="#">
+							<img src="img/test.png">
+							<div class="footer-game">
+								<p>Название игры</p>
+							</div>
+							</a>
+						</div>
+						<div class="game">
+							<a href="#">
+							<img src="img/test.png">
+							<div class="footer-game">
+								<p>Название игры</p>
+							</div>
+							</a>
+						</div>
+						<div class="game">
+							<a href="#">
+							<img src="img/test.png">
+							<div class="footer-game">
+								<p>Название игры</p>
+							</div>
+							</a>
+						</div>
+						<div class="game">
+							<a href="#">
+							<img src="img/test.png">
+							<div class="footer-game">
+								<p>Название игры</p>
+							</div>
+							</a>
+						</div>
+					</div>
+				<div class="error"></div>
+			</div>
+
+<script type="text/javascript">
+	var button = document.querySelector('#container .button');
+button.addEventListener('click', fullscreen);
+// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
+// so don't use it to detect exit fullscreen
+document.addEventListener('keydown', function (e) {
+  console.log('key press' + e.keyCode);
+});
+// detect enter or exit fullscreen mode
+document.addEventListener('webkitfullscreenchange', fullscreenChange);
+document.addEventListener('mozfullscreenchange', fullscreenChange);
+document.addEventListener('fullscreenchange', fullscreenChange);
+document.addEventListener('MSFullscreenChange', fullscreenChange);
+
+function fullscreen() {
+  // check if fullscreen mode is available
+  if (document.fullscreenEnabled || 
+    document.webkitFullscreenEnabled || 
+    document.mozFullScreenEnabled ||
+    document.msFullscreenEnabled) {
+    
+    // which element will be fullscreen
+    var iframe = document.querySelector('#container iframe');
+    // Do fullscreen
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    } else if (iframe.msRequestFullscreen) {
+      iframe.msRequestFullscreen();
+    }
+  }
+  else {
+    document.querySelector('.error').innerHTML = 'Your browser is not supported';
+  }
+}
+
+function fullscreenChange() {
+  if (document.fullscreenEnabled ||
+       document.webkitIsFullScreen || 
+       document.mozFullScreen ||
+       document.msFullscreenElement) {
+    console.log('enter fullscreen');
+  }
+  else {
+    console.log('exit fullscreen');
+  }
+  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
+  // comment this line and you will see
+  var iframe = document.querySelector('iframe');
+  iframe.src = iframe.src;
+}
+</script>
+			
+		</main>
+
+	</div>
+
+	<footer class="footer">
+		<div class="footer-content">
+			<ul>
+				<li>
+					<a href="#">Контакты</a>
+					<a href="#">Правообладателям</a>
+					<a href="#">Пользовательское соглашение</a>
+					<a href="#">Политика конфиденциальности</a>
+				</li>
+			</ul>
+			<div class="soc">
+				<a href="#"><img src="https://img.icons8.com/fluent-systems-regular/96/000000/vkontakte.png"/></a>
+				<a href="#"><img src="https://img.icons8.com/windows/64/000000/donate--v1.png" class="donat" /></a>
+				<a href="#"><img src="https://img.icons8.com/ios-glyphs/90/000000/telegram-app.png"/></a>
+			</div>
+			<p>© 2021 Onixplay - alfatest</p>
+		</div>
+	</footer>
+
+</body>
+</html>
