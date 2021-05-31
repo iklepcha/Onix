@@ -3,6 +3,7 @@
 <head>
 	<title>Onix</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="img/icon_logo.png" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,14 +18,10 @@
 			</a>
 		</div>
 		<nav class="navbar">
-			<ul>
-				<li>
-					<div class="input">
-						<input placeholder="Поиск игр" type="text" name="search">
-					</div>
-					<button>Войти</button>
-				</li>
-			</ul>
+			<form action="search.php">
+            		<input placeholder="Поиск игр" type="search" name="query" autocomplete="off">
+            		<button type="submit" class="search"></button>
+        	</form>
 		</nav>
 	</header>
 
@@ -164,9 +161,9 @@
 				</li>
 			</ul>
 			<div class="soc">
-				<a href="#" target="_blank"><img src="https://img.icons8.com/fluent-systems-regular/96/000000/vkontakte.png"/></a>
-				<a href="#" target="_blank"><img src="https://img.icons8.com/windows/64/000000/donate--v1.png" class="donat" /></a>
-				<a href="#" target="_blank"><img src="https://img.icons8.com/ios-glyphs/90/000000/telegram-app.png"/></a>
+				<a href="#"><img src="https://img.icons8.com/fluent-systems-regular/96/000000/vkontakte.png"/></a>
+				<a href="#"><img src="https://img.icons8.com/windows/64/000000/donate--v1.png" class="donat" /></a>
+				<a href="#"><img src="https://img.icons8.com/ios-glyphs/90/000000/telegram-app.png"/></a>
 			</div>
 			<p>© 2021 Onixplay - alfatest</p>
 		</div>
