@@ -507,12 +507,13 @@ iframe {
 	}
 }
 
-@media (max-width: 320px) {
+@media (max-width: 414px) {
 	.conteiner {
 		display: flex;
 		margin: 10px 2%;
 	}
 	.menu {
+		display: none;
 		width: 140px;
 		padding: 0px 5px 0px 0px;
 		font-size: 10px;
@@ -530,9 +531,9 @@ iframe {
 		width: 100%;
 	}
 	.game {
-		margin: 0 3px 6px 3px;
-		width: 90px;
-		height: 90px;
+		margin: 10px 3px 4px 3px;
+		width: 200px;
+		height: 200px;
 		border-radius: 5px;
 		transition: 0.5s;
 	}
@@ -541,14 +542,14 @@ iframe {
 		transition: 0.5s;
 	}
 	.game img {
-		width: 90px;
-		height: 90px;
+		width: 200px;
+		height: 200px;
 	}
 	.footer-game {
-		font-size: 10px;
-		width: 90px;
-		height: 22px;
-		margin-top: 68px;
+		font-size: 14px;
+		width: 200px;
+		height: 30px;
+		margin-top: 170px;
 		border-radius: 5px;
 	}
 	.footer-content {
